@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Playground</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>FLEXBOX PLAYGROUND</h1>
+    <div class="container">
+      <div class="sidebar">
+        <form onsubmit="submitFlexBox(event)">
+          <label>Box: </label>
+          <input type="number" id="box-input" />
+          <button class="add-item" type="submit" id="add-item">Add Item</button>
+          <button class="clear-item" type="reset" id="clear-item">
+            Clear Item
+          </button>
+          <div class="form">
+            <label for="">flex-direction</label>
+            <select name="" id="flex-direction">
+              <option value="row">row</option>
+              <option value="column">column</option>
+              <option value="row-reverse">row-reverse</option>
+              <option value="column-reverse">column-reverse</option>
+            </select>
+          </div>
+          <div class="form">
+            <label for="">flex-wrap</label>
+            <select name="" id="flex-wrap">
+              <option value="nowrap">nowrap</option>
+              <option value="wrap">wrap</option>
+              <option value="wrap-reverse">wrap-reverse</option>
+            </select>
+          </div>
+          <div class="form">
+            <label for="">justify-content</label>
+            <select name="" id="justify-content">
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+              <option value="center">center</option>
+              <option value="space-between">space-between</option>
+              <option value="space-around">space-around</option>
+              <option value="space-evenly">space-evenly</option>
+            </select>
+          </div>
+          <div class="form">
+            <label for="">align-items</label>
+            <select name="" id="align-items">
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+              <option value="center">center</option>
+              <option value="stretch">stretch</option>
+              <option value="baseline">baseline</option>
+            </select>
+          </div>
+          <div class="form">
+            <label for="">align-content</label>
+            <select name="" id="align-content">
+              <option value="flex-start">flex-start</option>
+              <option value="flex-end">flex-end</option>
+              <option value="center">center</option>
+              <option value="stretch">stretch</option>
+              <option value="space-between">space-between</option>
+              <option value="space-around">space-around</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="object">
+        <div id="result"></div>
+      </div>
+    </div>
+    <div class="result-container">
+      <div class="code-container">
+        <button id="copy-css" onclick="copyToClipboard('code-result')">
+          Copy
+        </button>
+        <pre id="code-result"></pre>
+      </div>
+      <div class="code-container">
+        <button onclick="copyToClipboard('html-result')">Copy</button>
+        <pre id="html-result"></pre>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
